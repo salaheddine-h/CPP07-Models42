@@ -10,3 +10,4 @@ void    iter(T_array *array , size_t length , T_function function)
 		function(array[i]);
 	}
 }
+

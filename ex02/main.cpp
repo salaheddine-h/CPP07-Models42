@@ -1,7 +1,8 @@
 #include <iostream>
 #include "Array.hpp"
 
-int main() {
+int main() 
+{
     Array<int> a;
     std::cout << "Empty array size: " << a.size() << std::endl;
 

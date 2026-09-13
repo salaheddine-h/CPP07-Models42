@@ -1,30 +1,24 @@
 #include "iter.hpp"
 
-void times_two(int &i)
+void printInt(int &i)
 {
-	i *= 2;
+    std::cout << i << std::endl;
 }
 
-void to_upper(std::string &str)
+void printString(std::string &s)
 {
-	for (size_t i = 0; i < str.length(); i++)
-		str[i] = std::toupper(str[i]);
+    std::cout << s << std::endl;
 }
 
-int main( void )
+int main()
 {
-	std::cout << "Test int array\n";
-	int int_arr[] = {1, 2, 3};
+    int nums[] = {1, 2, 3, 9};
+    std::string words[] = {"salah", "eddine", "hali"};
 
-	::iter(int_arr, 3, times_two);
-	for (int i = 0; i < 3; i++)
-		std::cout << int_arr[i] << std::endl;
-
-	std::cout << "Test string array\n";
-	std::string str_arr[] = {"Hello", "World", "!"};
-	::iter(str_arr, 3, to_upper);
-	for (int i = 0; i < 3; i++)
-		std::cout << str_arr[i] << std::endl;
-
-	return 0;
+	std::cout<<"=-=-=-=-=-=-=-=-=-=-=-=\n";
+    ::iter(nums, 4, printInt);
+	std::cout<<"=-=-=-=-=-=-=-=-=-=-=-=\n";
+    ::iter(words, 3, printString);
+	std::cout<<"=-=-=-=-=-=-=-=-=-=-=-=\n";
+	return(0);
 }

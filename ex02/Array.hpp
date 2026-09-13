@@ -4,22 +4,23 @@
 #include <exception>
 
 template <typename T>
-class Array {
-public:
-    Array();
-    Array(unsigned int n);
-    Array(const Array& other);
-    Array& operator=(const Array& other);
-    ~Array();
+class Array 
+{
+    public:
+        Array();
+        Array(unsigned int n);
+        Array(const Array& other);
+        Array& operator=(const Array& other);
+        ~Array();
 
-    T& operator[](unsigned int idx);
-    const T& operator[](unsigned int idx) const;
+        T& operator[](unsigned int idx);
+        const T& operator[](unsigned int idx) const;
 
-    unsigned int size() const;
+        unsigned int size() const;
 
-private:
-    T* _data;
-    unsigned int _size;
+    private:
+        T* _data;
+        unsigned int _size;
 };
 
 #include "Array.tpp"
