@@ -1,26 +1,24 @@
-#pragma once 
+#pragma once
 
 #include <iostream>
 #include <exception>
 
 template <typename T>
-class Array 
+class Array
 {
+    private:
+        T *data;
+        unsigned int _size;
+
     public:
         Array();
         Array(unsigned int n);
-        Array(const Array& other);
-        Array& operator=(const Array& other);
-        ~Array();
-
-        T& operator[](unsigned int idx);
-        const T& operator[](unsigned int idx) const;
-
+        Array(const Array &other);
+        Array& operator=(const Array &other);
+        T& operator[](unsigned int index);
+        const T& operator[](unsigned int index) const;
         unsigned int size() const;
-
-    private:
-        T* _data;
-        unsigned int _size;
+        ~Array();
 };
 
 #include "Array.tpp"
